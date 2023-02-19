@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Customer Login{% endblock title%}
+
+
+{% block main-content %}
+  <div class="container">
+    <div class="row my-3">
+        <div class="col-sm-6 offset-sm-3">
+            <h3>Login</h3>
+            <hr>
+            <form action="/login" method="post" class="shadow p-5">
+                {% csrf_token %}
+                <h6>User Name</h6>
+               <input type="text" name="username" placeholder="username" style="width: 14cm;"><br>
+               <h6>Password</h6>
+               <input type="password" name="password" placeholder="password" style="width: 14cm;"><br>
+                <small><a href="{% url 'password_reset' %}">Forgot Password ?</a></small>
+                <br>
+                <input type="submit" class="btn btn-primary mt-4" value="Login">
+                <div class="text-center text-primary fw-bold">
+                    <small>New User ?
+                        <a href="{% url 'register' %}" class="text-danger">Create an Account</a>
+                    </small>
+                </div>
+                {% for message in messages %}
+                     <h3> {{message}}  </h3>
+                {% endfor %}
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock main-content %}

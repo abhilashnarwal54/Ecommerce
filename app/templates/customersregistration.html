@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title%}
+
+{% block main-content %}
+  <div class="container">
+    <div class="col-sm-6 offset-sm-3">
+        <h3>Customer Registration</h3>
+        <hr>
+        <form action="/reg" method="post"  class="shadow p-5">
+            {% csrf_token %}
+            <h6>UserName</h6>
+            <input type="text" name="username" placeholder="Enter your username" style="width: 14cm;"><br>
+            <h6>Email</h6>
+            <input type="email" name="email" placeholder="Enter Your Email" style="width: 14cm;"><br>
+            <h6>Password</h6>
+            <input type="text" name="password" placeholder="Enter password" style="width: 14cm;"><br>
+            <h6>ReEnterPassword</h6>
+            <input type="password" name="password1" placeholder="Enter password agin" style="width: 14cm;"><br> 
+            <input type="submit" class="btn btn-primary"><br>
+            <div class="text-center text-primary fw-bold">
+                <small>Existing User ? <a href="{% url 'login' %}" class="text-danger">Login</a></small>
+            </div>
+        </form>
+    </div>
+  </div>
+{% endblock main-content %}

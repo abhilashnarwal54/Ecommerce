@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title%}
+
+<!--Product slider-->
+{% block banner-slider %}
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/banner1.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner2.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner3.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner4.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+  </div>
+{% endblock banner-slider %}
+
+<!--Product Information-->
+{% block information %}
+<div class="container"> 
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Lalisa offers a wide range of products in Electrcal and gadgets and face care products and by product-categories.
+            The Electtrcal gadgets comprises of 5 types of varients and the by-product comprises of 14 types of varients.
+            Lalisa offers a wide range of a  products comparisng of Laptops, Perfumes,
+            Face Creams, Mobiles, Tv's, Body sprays, face washes and soaps 
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+<!--Products gallery-->
+{% block main-content %}
+<div class="container">
+      <h1 class="text-center"> Dairy Products</h1>
+      <br><br>
+    <div class="row container">
+       <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'LP' %}">
+                   <div class="goodnessseccont text-center">
+                       <img src="{% static 'app/images/products/lap1.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Laptops</p>
+                
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'FC' %}">
+                   <div class="goodnessseccont text-center">
+                       <img src="{% static 'app/images/products/facecream1.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">FaceCream</p>
+                
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'MB' %}">
+                   <div class="goodnessseccont text-center">
+                       <img src="{% static 'app/images/products/mobile2.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Mobiles</p>
+                
+                    </div>
+                </a>  
+            </div>
+        </div>
+   </div>
+   <br><br>
+   <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnesssec buttermilk smbg">
+               <a href="{% url 'category' 'TV' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/products/tv1.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">TV's</p>
+             
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnesssec buttermilk curdbgpro">
+               <a href="{% url 'category' 'PF' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/products/perfume4.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Perfumes</p>
+             
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" 
+        data-wow-duration="1s" data-wow-delay="0.6s"
+        style="animation-duration: 1s; animation-delay:0.6s; animation-name:none;">
+           <div class="goodnesssec buttermilk buttermilk">
+               <a href="{% url 'category' 'BS' %}">
+                   <div class="goodnessseccont text-center">
+                        <img src="{% static 'app/images/products/bs1.jpg'%}" class="img-responsive center-block" alt="">
+                        <p class="mlkpro">Bodysprays</p>
+             
+                    </div>
+                </a>  
+            </div>
+        </div>
+    </div>
+   
+</div>
+   <br><br>
+
+{% endblock main-content %}

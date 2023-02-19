@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock title%}
+
+
+
+{% block banner-slider %}
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/banner1.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner2.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner3.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'app/images/banner/banner4.jpg' %}" class="d-block w-100" alt="banner images">
+      </div>
+  </div>
+{% endblock banner-slider %}
+
+
+{% block main-content %}
+  <div class="container mt-3">
+    <br>
+    <h2 class="text-center">About Us</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">
+            This is Public Limeited company having its registered and corparate office at 
+            Hyderabad city of Telagana state i india.The company incorporated in the year 2018 and 
+            This is one of the fastest growing public listed company in hyderabad
+        </p>
+    </div>
+    <br><br>
+    <h2 class="text-center">Mission</h2>
+    <div class="row container">
+        <p class="fs-4 text-center">
+            To embrace the right technology to delight our coustmers 
+            Empowring the farmer community through our unique 'Relation ship formaing'
+            To antispate, understand and respond to our customers' needs by creating
+            high-quality products and making them avalible through innovative and convenient channels
+        </p>
+    </div>
+    <br><br><br>
+  </div>
+{% endblock main-content %}
